@@ -1,0 +1,6 @@
+class Solution {
+    public boolean rotateString(String s, String goal) {
+        // Both strings must have the same length and goal must be inside s + s
+        return s.length() == goal.length() && (s + s).contains(goal);
+    }
+}
