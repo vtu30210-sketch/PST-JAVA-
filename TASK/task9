@@ -1,0 +1,31 @@
+class Calculator {
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public double divide(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+
+        return (double) a / b;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Calculator calc = new Calculator();
+
+        boolean test1 = calc.add(10, 20) == 30;
+        boolean test2 = calc.divide(20, 10) == 2.0;
+
+        if (test1 && test2) {
+            System.out.println("Test Passed");
+        } else {
+            System.out.println("Test Failed");
+        }
+    }
+}
